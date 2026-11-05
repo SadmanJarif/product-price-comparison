@@ -1,0 +1,28 @@
+/* Dealer Evaluation frontend — Product Price Comparison (IBM Course 11). */
+* { box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; margin: 0; background: #f4f6f8; color: #1a202c; }
+header { background: #0f2a44; color: #fff; padding: 28px 24px; }
+header h1 { margin: 0 0 6px; font-size: 28px; }
+.subtitle { margin: 0; opacity: 0.85; }
+main { max-width: 960px; margin: 0 auto; padding: 20px 24px 40px; }
+h2 { margin-top: 28px; }
+.hint { color: #4a5568; }
+.status { background: #e6f4ea; border: 1px solid #a3d9a5; padding: 10px 14px; border-radius: 6px; }
+.status.error { background: #fdecea; border-color: #f5a3a3; }
+#product-dropdown { display: block; margin: 8px 0 16px; padding: 10px 12px; font: inherit; font-size: 16px; width: 100%; max-width: 560px; border: 2px solid #0f2a44; border-radius: 6px; background: #fff; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.card { background: #fff; border: 1px solid #d9dee3; border-radius: 8px; padding: 16px; cursor: pointer; text-align: left; font: inherit; }
+.card:hover { border-color: #0f2a44; }
+.card.selected { border: 2px solid #0f2a44; background: #eef4fa; }
+.card h3 { margin: 0 0 6px; font-size: 17px; }
+.card p { margin: 4px 0; color: #4a5568; font-size: 14px; }
+.card .meta { font-size: 13px; color: #718096; }
+.price-card { background: #fff; border: 2px solid #0f2a44; border-radius: 8px; padding: 20px; font-size: 18px; }
+.price-card .big { font-size: 34px; font-weight: bold; color: #0f2a44; }
+#show-all-btn { margin-top: 14px; padding: 10px 18px; font-size: 15px; background: #0f2a44; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+table { width: 100%; border-collapse: collapse; background: #fff; }
+th, td { border: 1px solid #d9dee3; padding: 10px 12px; text-align: left; }
+th { background: #eef4fa; }
+tr.cheapest-row td { background: #e6f4ea; font-weight: bold; }
+.cheapest { font-weight: bold; }
+footer { max-width: 960px; margin: 0 auto; padding: 0 24px 30px; color: #718096; font-size: 13px; }
