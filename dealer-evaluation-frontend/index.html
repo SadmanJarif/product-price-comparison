@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dealer Evaluation — Product Price Comparison</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Product Price Comparison</h1>
+  <p class="subtitle">Dealer Evaluation frontend — compare dealer prices for each product.
+  Prices shown are sample/demo data (USD).</p>
+</header>
+
+<main>
+  <p id="status" class="status">Loading products…</p>
+
+  <section aria-label="Products">
+    <h2>Products</h2>
+    <p class="hint">Click a product to see its dealers.</p>
+    <div id="products" class="grid"></div>
+  </section>
+
+  <section id="dealers-section" aria-label="Dealers" hidden>
+    <h2>Dealers for <span id="selected-product-name"></span></h2>
+    <p class="hint">Click a dealer to see its price.</p>
+    <div id="dealers" class="grid"></div>
+    <button id="show-all-btn" type="button">Show prices from all dealers</button>
+  </section>
+
+  <section id="price-section" aria-label="Price" hidden>
+    <h2>Price from selected dealer</h2>
+    <div id="price" class="price-card"></div>
+  </section>
+
+  <section id="all-prices-section" aria-label="All dealer prices" hidden>
+    <h2>Prices from all dealers</h2>
+    <table id="all-prices-table">
+      <thead><tr><th>Dealer</th><th>Rating</th><th>Delivery</th><th>Price (USD)</th></tr></thead>
+      <tbody id="all-prices"></tbody>
+    </table>
+    <p id="cheapest" class="cheapest"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Microservices: Product Details (Flask, :5000) · Dealer Pricing (Node.js/Express, :3000) ·
+  Frontend on :8080. Local build only — not deployed to IBM Cloud.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
